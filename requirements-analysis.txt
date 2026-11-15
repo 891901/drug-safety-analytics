@@ -1,0 +1,41 @@
+# =============================================================================
+# Drug Safety Intelligence Platform - FULL analysis pipeline dependencies
+#
+# These are the dependencies for the offline data-engineering pipeline (ingest
+# FAERS -> clean -> analyse -> export), NOT for the deployed dashboard. The
+# deployed Streamlit app uses requirements.txt (streamlit / plotly / networkx /
+# PyYAML only).
+#
+# Install inside a virtual environment:
+#     python -m venv .venv
+#     .venv\Scripts\activate           # Windows
+#     pip install -r requirements-analysis.txt
+#
+# NOTE FOR WINDOWS: PySpark needs a JDK (Java 11 or 17) available at %JAVA_HOME%.
+# =============================================================================
+
+# --- Core data engineering ---------------------------------------------------
+pyspark>=3.5.0,<4.0
+pandas>=2.1.0
+numpy>=1.26.0
+pyarrow>=14.0.0
+
+# --- Machine learning --------------------------------------------------------
+scikit-learn>=1.4.0          # IsolationForest, clustering, scaling
+mlxtend>=0.23.0              # Apriori frequent itemsets / association rules
+
+# --- Graph analytics ---------------------------------------------------------
+networkx>=3.2                # drug co-occurrence network construction
+
+# --- Visualisation & dashboard ----------------------------------------------
+plotly>=5.18.0
+streamlit>=1.31.0
+
+# --- Configuration / logging -------------------------------------------------
+PyYAML>=6.0.1
+
+# --- Notebooks ---------------------------------------------------------------
+jupyterlab>=4.0.0
+
+# --- Testing -----------------------------------------------------------------
+pytest>=7.4.0

@@ -1,0 +1,15 @@
+quarter,outc_cod,outcome_label,reports
+2026_Q1,OT,Other Serious (Important Medical Event),158154
+2026_Q1,HO,Hospitalization - Initial or Prolonged,80509
+2026_Q1,DE,Death,30927
+2026_Q1,LT,Life-Threatening,13222
+2026_Q1,DS,Disability,5935
+2026_Q1,CA,Congenital Anomaly,1517
+2026_Q1,RI,Required Intervention to Prevent Permanent Impairment/Damage,1316
+2026_Q2,OT,Other Serious (Important Medical Event),168785
+2026_Q2,HO,Hospitalization - Initial or Prolonged,83615
+2026_Q2,DE,Death,28330
+2026_Q2,LT,Life-Threatening,13195
+2026_Q2,DS,Disability,6336
+2026_Q2,RI,Required Intervention to Prevent Permanent Impairment/Damage,1775
+2026_Q2,CA,Congenital Anomaly,1669

@@ -1,0 +1,169 @@
+# =============================================================================
+# Big Data-Driven Drug Safety Intelligence Platform
+# Central configuration file.
+#
+# All path values are RELATIVE TO THE PROJECT ROOT.
+# No code should hard-code paths or thresholds - read them from this file.
+# =============================================================================
+
+project:
+  name: "Big Data-Driven Drug Safety Intelligence Platform"
+  short_name: "Drug Safety Analytics"
+  version: "0.1.0"
+
+# -----------------------------------------------------------------------------
+# Storage locations (see README.md for a description of each folder)
+# -----------------------------------------------------------------------------
+paths:
+  raw: "data/raw"              # FAERS ASCII source files  -> READ ONLY
+  processed: "data/processed"  # cleaned / typed parquet
+  analytics: "data/analytics"  # aggregated analysis outputs
+  models: "models"             # fitted model / vectoriser artefacts
+  reports: "reports"           # generated reports and figures
+  logs: "reports/logs"
+  notebooks: "notebooks"
+
+# -----------------------------------------------------------------------------
+# FAERS ASCII source layout
+# Source: FDA Adverse Event Reporting System quarterly ASCII extracts (2026 Q1/Q2).
+# Verified against the extracted files - see reports/dataset_inspection.txt:
+#   * '$'-delimited, one file per table per quarter, e.g. DEMO26Q1.txt
+#   * the 2026 extracts DO ship a header row (lower-case column names)
+#   * the files decode as UTF-8
+#   * files sit one level down, under <quarter>/ASCII/ ; withdrawn cases live
+#     under <quarter>/Deleted/DELETE<yy>Q<q>.txt
+# File discovery is recursive, so the inner "ASCII" folder needs no setting.
+# -----------------------------------------------------------------------------
+faers:
+  quarters:
+    - "2026_Q1"
+    - "2026_Q2"
+  # {table} = ASCII table stem, {yy} = 2-digit year, {q} = quarter number
+  filename_pattern: "{table}{yy}Q{q}.txt"
+  delimiter: "$"
+  encoding: "utf-8"
+  header: true
+  tables:
+    DEMO: "demographics"
+    DRUG: "drug"
+    REAC: "reaction"
+    OUTC: "outcome"
+    RPSR: "report_source"
+    THER: "therapy"
+    INDI: "indication"
+  # Column count per table, verified from the header rows in both quarters.
+  # Used to validate the ingested schema.
+  expected_columns:
+    DEMO: 25
+    DRUG: 20
+    REAC: 4
+    OUTC: 3
+    RPSR: 3
+    THER: 7
+    INDI: 4
+  # Identifier columns that must be present and non-null after ingestion.
+  id_columns:
+    - "PRIMARYID"
+    - "CASEID"
+    - "CASEVERSION"
+  # Columns written to Parquet as 64-bit integers. Every other column stays a
+  # raw string so no source value is altered or reinterpreted.
+  numeric_columns:
+    - "PRIMARYID"
+    - "CASEID"
+    - "CASEVERSION"
+    - "DRUG_SEQ"
+    - "DSG_DRUG_SEQ"
+    - "INDI_DRUG_SEQ"
+  # Date-like columns, kept as raw strings (formats vary: YYYYMMDD and YYYYMM).
+  date_columns:
+    - "EVENT_DT"
+    - "FDA_DT"
+    - "MFR_DT"
+    - "INIT_FDA_DT"
+    - "REPT_DT"
+    - "START_DT"
+    - "END_DT"
+  # Primary key used to join the seven ASCII tables into one case-level view.
+  join_key: "PRIMARYID"
+  # Parquet output switch. Disabled because this Windows environment cannot
+  # write Parquet: Spark's Hadoop-backed writer needs winutils.exe (absent), and
+  # the PyArrow/pandas native libraries are blocked by an OS Application Control
+  # policy. The write step lives in src/ingestion/parquet_output.py - set this to
+  # true once the environment supports it.
+  write_parquet: false
+
+# -----------------------------------------------------------------------------
+# Apache Spark session settings
+# -----------------------------------------------------------------------------
+spark:
+  app_name: "DrugSafetyIntelligence"
+  master: "local[*]"
+  driver_memory: "4g"
+  executor_memory: "4g"
+  shuffle_partitions: 8
+  log_level: "WARN"
+  # Upper bound on the bytes of source data per Spark partition. Read-side
+  # partitions are streamed to the driver one at a time, so a smaller value
+  # trades a little parallelism for tighter memory use (64 MB).
+  max_partition_bytes: 67108864
+
+# -----------------------------------------------------------------------------
+# Analytical parameters
+# -----------------------------------------------------------------------------
+analytics:
+  # Disproportionality analysis (PRR = Proportional Reporting Ratio,
+  # ROR = Reporting Odds Ratio). Thresholds follow the standard screening
+  # conventions used in pharmacovigilance literature.
+  signal_detection:
+    min_reports: 3                # minimum observed count for a drug-event pair
+    prr_threshold: 2.0            # PRR >= 2.0
+    ror_lower_ci_threshold: 1.0   # ROR 95% CI lower bound > 1.0
+    chi_square_threshold: 4.0     # optional additional filter
+
+  # Drug co-occurrence (pair-level mining)
+  cooccurrence:
+    min_support: 0.001
+    min_confidence: 0.20
+    min_lift: 1.20
+    max_itemset_size: 3
+
+  # Apriori association-rule mining over report-level drug transactions.
+  # support    = reports containing the itemset / total reports
+  # confidence = reports containing the itemset / reports containing the antecedent
+  # lift       = confidence / support of the consequent (1.0 = independence)
+  apriori:
+    min_support: 0.001
+    min_confidence: 0.20
+    min_lift: 1.20
+    max_itemset_size: 3
+
+  # Isolation Forest anomaly detection
+  anomalies:
+    contamination: 0.05
+    n_estimators: 100
+    max_samples: "auto"
+    random_state: 42
+
+# -----------------------------------------------------------------------------
+# Visualisation defaults (shared by the Plotly figures and the dashboard)
+# -----------------------------------------------------------------------------
+visualization:
+  theme: "plotly_white"
+  top_n: 20
+  network:
+    min_edge_weight: 2
+    layout: "spring"
+    # The interactive figure is limited to the most-connected drugs so the
+    # rendered network stays readable; the centrality/community metrics are
+    # always computed on the full network built from the input edge list.
+    max_display_nodes: 60
+    max_display_edges: 240
+
+# -----------------------------------------------------------------------------
+# Logging
+# -----------------------------------------------------------------------------
+logging:
+  level: "INFO"
+  format: "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s"
+  file: "reports/logs/pipeline.log"

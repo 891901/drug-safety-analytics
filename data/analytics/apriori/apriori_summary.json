@@ -1,0 +1,480 @@
+{
+  "generated_at": "2026-11-14T18:27:09",
+  "quarters": [
+    "2026_Q1",
+    "2026_Q2"
+  ],
+  "disclaimer": "An association rule only says the drugs were reported together more often than independence predicts. It is NOT evidence of a drug-drug interaction, of a shared adverse event, of an underlying indication, or of causation.",
+  "grain": "Transaction = one distinct (quarter, PRIMARYID) report with at least one drug; its items are that report's distinct DRUGNAME_STD values. Frequent itemsets and rules are mined per transaction, never synthesised.",
+  "thresholds": {
+    "min_support": 0.001,
+    "min_confidence": 0.2,
+    "min_lift": 1.2,
+    "max_itemset_size": 3
+  },
+  "counts": {
+    "total_reports": 819683,
+    "reports_with_drugs": 819683,
+    "transactions": 819683,
+    "drug_rows": 3330435,
+    "distinct_report_drug_rows": 2507110,
+    "distinct_drug_names": 48884,
+    "frequent_1_itemsets": 628,
+    "frequent_2_itemsets": 771,
+    "frequent_3_itemsets": 1057,
+    "rules_scanned": 7884,
+    "rules_overall": 5556,
+    "rules_q1_q2": 13073,
+    "shared_rules": 2484
+  },
+  "total_reports_by_quarter": {
+    "2026_Q1": 397224,
+    "2026_Q2": 422459
+  },
+  "transactions_by_quarter": {
+    "2026_Q2": 422459,
+    "2026_Q1": 397224
+  },
+  "frequent_itemsets_by_quarter": {
+    "2026_Q1": {
+      "1": 641,
+      "2": 928,
+      "3": 1997
+    },
+    "2026_Q2": {
+      "1": 616,
+      "2": 684,
+      "3": 473
+    }
+  },
+  "top_rules_by_lift": [
+    {
+      "antecedent": [
+        "DESOXIMETASONE",
+        "ORENCIA"
+      ],
+      "consequent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "antecedent_label": "DESOXIMETASONE + ORENCIA",
+      "consequent_label": "PHTHALYLSULFATHIAZOLE",
+      "itemset_reports": 957,
+      "antecedent_reports": 1066,
+      "consequent_reports": 1195,
+      "support": 0.0011675245186248831,
+      "confidence": 0.8977485928705441,
+      "lift": 615.790175606616,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "consequent": [
+        "DESOXIMETASONE",
+        "ORENCIA"
+      ],
+      "antecedent_label": "PHTHALYLSULFATHIAZOLE",
+      "consequent_label": "DESOXIMETASONE + ORENCIA",
+      "itemset_reports": 957,
+      "antecedent_reports": 1195,
+      "consequent_reports": 1066,
+      "support": 0.0011675245186248831,
+      "confidence": 0.800836820083682,
+      "lift": 615.790175606616,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "DESOXIMETASONE",
+        "SIMPONI"
+      ],
+      "consequent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "antecedent_label": "DESOXIMETASONE + SIMPONI",
+      "consequent_label": "PHTHALYLSULFATHIAZOLE",
+      "itemset_reports": 899,
+      "antecedent_reports": 1003,
+      "consequent_reports": 1195,
+      "support": 0.0010967654568900416,
+      "confidence": 0.8963110667996012,
+      "lift": 614.804137378659,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "consequent": [
+        "DESOXIMETASONE",
+        "SIMPONI"
+      ],
+      "antecedent_label": "PHTHALYLSULFATHIAZOLE",
+      "consequent_label": "DESOXIMETASONE + SIMPONI",
+      "itemset_reports": 899,
+      "antecedent_reports": 1195,
+      "consequent_reports": 1003,
+      "support": 0.0010967654568900416,
+      "confidence": 0.7523012552301255,
+      "lift": 614.804137378659,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "ORENCIA",
+        "SIMPONI"
+      ],
+      "consequent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "antecedent_label": "ORENCIA + SIMPONI",
+      "consequent_label": "PHTHALYLSULFATHIAZOLE",
+      "itemset_reports": 964,
+      "antecedent_reports": 1083,
+      "consequent_reports": 1195,
+      "support": 0.0011760644053859846,
+      "confidence": 0.8901200369344414,
+      "lift": 610.5575416188567,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "consequent": [
+        "ORENCIA",
+        "SIMPONI"
+      ],
+      "antecedent_label": "PHTHALYLSULFATHIAZOLE",
+      "consequent_label": "ORENCIA + SIMPONI",
+      "itemset_reports": 964,
+      "antecedent_reports": 1195,
+      "consequent_reports": 1083,
+      "support": 0.0011760644053859846,
+      "confidence": 0.8066945606694561,
+      "lift": 610.5575416188567,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "ACTEMRA",
+        "SIMPONI"
+      ],
+      "consequent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "antecedent_label": "ACTEMRA + SIMPONI",
+      "consequent_label": "PHTHALYLSULFATHIAZOLE",
+      "itemset_reports": 907,
+      "antecedent_reports": 1023,
+      "consequent_reports": 1195,
+      "support": 0.0011065253274741577,
+      "confidence": 0.8866080156402737,
+      "lift": 608.1485506979636,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "consequent": [
+        "ACTEMRA",
+        "SIMPONI"
+      ],
+      "antecedent_label": "PHTHALYLSULFATHIAZOLE",
+      "consequent_label": "ACTEMRA + SIMPONI",
+      "itemset_reports": 907,
+      "antecedent_reports": 1195,
+      "consequent_reports": 1023,
+      "support": 0.0011065253274741577,
+      "confidence": 0.7589958158995815,
+      "lift": 608.1485506979636,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "CIMZIA",
+        "SIMPONI"
+      ],
+      "consequent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "antecedent_label": "CIMZIA + SIMPONI",
+      "consequent_label": "PHTHALYLSULFATHIAZOLE",
+      "itemset_reports": 862,
+      "antecedent_reports": 978,
+      "consequent_reports": 1195,
+      "support": 0.0010516260554385049,
+      "confidence": 0.8813905930470347,
+      "lift": 604.5697786448306,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "consequent": [
+        "CIMZIA",
+        "SIMPONI"
+      ],
+      "antecedent_label": "PHTHALYLSULFATHIAZOLE",
+      "consequent_label": "CIMZIA + SIMPONI",
+      "itemset_reports": 862,
+      "antecedent_reports": 1195,
+      "consequent_reports": 978,
+      "support": 0.0010516260554385049,
+      "confidence": 0.7213389121338912,
+      "lift": 604.5697786448306,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "REMICADE",
+        "SIMPONI"
+      ],
+      "consequent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "antecedent_label": "REMICADE + SIMPONI",
+      "consequent_label": "PHTHALYLSULFATHIAZOLE",
+      "itemset_reports": 835,
+      "antecedent_reports": 948,
+      "consequent_reports": 1195,
+      "support": 0.0010186864922171132,
+      "confidence": 0.880801687763713,
+      "lift": 604.1658324947479,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "consequent": [
+        "REMICADE",
+        "SIMPONI"
+      ],
+      "antecedent_label": "PHTHALYLSULFATHIAZOLE",
+      "consequent_label": "REMICADE + SIMPONI",
+      "itemset_reports": 835,
+      "antecedent_reports": 1195,
+      "consequent_reports": 948,
+      "support": 0.0010186864922171132,
+      "confidence": 0.698744769874477,
+      "lift": 604.1658324947479,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "COSENTYX",
+        "ORENCIA"
+      ],
+      "consequent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "antecedent_label": "COSENTYX + ORENCIA",
+      "consequent_label": "PHTHALYLSULFATHIAZOLE",
+      "itemset_reports": 875,
+      "antecedent_reports": 996,
+      "consequent_reports": 1195,
+      "support": 0.0010674858451376935,
+      "confidence": 0.8785140562248996,
+      "lift": 602.5966838063551,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "consequent": [
+        "COSENTYX",
+        "ORENCIA"
+      ],
+      "antecedent_label": "PHTHALYLSULFATHIAZOLE",
+      "consequent_label": "COSENTYX + ORENCIA",
+      "itemset_reports": 875,
+      "antecedent_reports": 1195,
+      "consequent_reports": 996,
+      "support": 0.0010674858451376935,
+      "confidence": 0.7322175732217573,
+      "lift": 602.5966838063551,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "ACETAMINOPHEN",
+        "SIMPONI"
+      ],
+      "consequent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "antecedent_label": "ACETAMINOPHEN + SIMPONI",
+      "consequent_label": "PHTHALYLSULFATHIAZOLE",
+      "itemset_reports": 843,
+      "antecedent_reports": 966,
+      "consequent_reports": 1195,
+      "support": 0.0010284463628012293,
+      "confidence": 0.8726708074534162,
+      "lift": 598.5886405571871,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "consequent": [
+        "ACETAMINOPHEN",
+        "SIMPONI"
+      ],
+      "antecedent_label": "PHTHALYLSULFATHIAZOLE",
+      "consequent_label": "ACETAMINOPHEN + SIMPONI",
+      "itemset_reports": 843,
+      "antecedent_reports": 1195,
+      "consequent_reports": 966,
+      "support": 0.0010284463628012293,
+      "confidence": 0.705439330543933,
+      "lift": 598.5886405571871,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "ERELZI",
+        "ORENCIA"
+      ],
+      "consequent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "antecedent_label": "ERELZI + ORENCIA",
+      "consequent_label": "PHTHALYLSULFATHIAZOLE",
+      "itemset_reports": 841,
+      "antecedent_reports": 967,
+      "consequent_reports": 1195,
+      "support": 0.0010260063951552003,
+      "confidence": 0.8697001034126164,
+      "lift": 596.5509538623963,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "consequent": [
+        "ERELZI",
+        "ORENCIA"
+      ],
+      "antecedent_label": "PHTHALYLSULFATHIAZOLE",
+      "consequent_label": "ERELZI + ORENCIA",
+      "itemset_reports": 841,
+      "antecedent_reports": 1195,
+      "consequent_reports": 967,
+      "support": 0.0010260063951552003,
+      "confidence": 0.703765690376569,
+      "lift": 596.5509538623963,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "INFLIXIMAB",
+        "ORENCIA"
+      ],
+      "consequent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "antecedent_label": "INFLIXIMAB + ORENCIA",
+      "consequent_label": "PHTHALYLSULFATHIAZOLE",
+      "itemset_reports": 859,
+      "antecedent_reports": 992,
+      "consequent_reports": 1195,
+      "support": 0.0010479661039694613,
+      "confidence": 0.8659274193548387,
+      "lift": 593.9631672627885,
+      "quarter": null
+    },
+    {
+      "antecedent": [
+        "PHTHALYLSULFATHIAZOLE"
+      ],
+      "consequent": [
+        "INFLIXIMAB",
+        "ORENCIA"
+      ],
+      "antecedent_label": "PHTHALYLSULFATHIAZOLE",
+      "consequent_label": "INFLIXIMAB + ORENCIA",
+      "itemset_reports": 859,
+      "antecedent_reports": 1195,
+      "consequent_reports": 992,
+      "support": 0.0010479661039694613,
+      "confidence": 0.7188284518828452,
+      "lift": 593.9631672627885,
+      "quarter": null
+    }
+  ],
+  "checks": [
+    {
+      "name": "cleaning removed no rows (DEMO/DRUG)",
+      "passed": true,
+      "detail": "DEMO=819,683->819,683; DRUG=3,330,435->3,330,435"
+    },
+    {
+      "name": "duplicate drug names within a transaction removed",
+      "passed": true,
+      "detail": "3,330,435 DRUG rows reduced to 2,507,110 distinct (report, drug) rows"
+    },
+    {
+      "name": "transactions equal the distinct (quarter, PRIMARYID) reports with a drug",
+      "passed": true,
+      "detail": "819,683 transaction(s) vs 819,683 distinct report(s) carrying a drug"
+    },
+    {
+      "name": "transactions are listed once per quarter and sum to the overall count",
+      "passed": true,
+      "detail": "2026_Q1=397,224; 2026_Q2=422,459 (sum 819,683)"
+    },
+    {
+      "name": "every frequent 1-itemset meets the minimum support",
+      "passed": true,
+      "detail": "628 frequent item(s); minimum report count = 819.68"
+    },
+    {
+      "name": "frequent itemset counts lie within [min count, total transactions]",
+      "passed": true,
+      "detail": "checked 2,456 itemset(s)"
+    },
+    {
+      "name": "Apriori anti-monotonicity: every subset of a frequent itemset is frequent",
+      "passed": true,
+      "detail": "all 2-subsets of 1,057 triple(s) are frequent pairs; all items are frequent"
+    },
+    {
+      "name": "no duplicate association rules",
+      "passed": true,
+      "detail": "5,556 rule(s), 0 duplicate(s)"
+    },
+    {
+      "name": "every rule satisfies the configured support, confidence and lift thresholds",
+      "passed": true,
+      "detail": "support >= 0.001, confidence >= 0.2, lift >= 1.2"
+    },
+    {
+      "name": "rule support never exceeds its antecedent or consequent support",
+      "passed": true,
+      "detail": "checked 5,556 rule(s)"
+    },
+    {
+      "name": "confidence and lift identities recomputed from integer counts",
+      "passed": true,
+      "detail": "max |lift - confidence / support(consequent)| = 1.137e-13"
+    },
+    {
+      "name": "sampled frequent itemsets recounted independently in Spark",
+      "passed": true,
+      "detail": "25 item(s) recount-sampled, max |Spark - mining| difference = 0"
+    },
+    {
+      "name": "Q1 and Q2 are both mined separately and are distinguishable",
+      "passed": true,
+      "detail": "2026_Q1: 641 items, 928 pairs, 1,997 triples, 2026_Q2: 616 items, 684 pairs, 473 triples"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,72 @@
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.ipynb_checkpoints/
+
+# =============================================================================
+# Virtual environments
+# =============================================================================
+.venv/
+venv/
+env/
+
+# =============================================================================
+# Secrets / local overrides
+# =============================================================================
+.env
+.env.*
+*.local.yaml
+
+# =============================================================================
+# Java / Spark runtime artefacts
+# =============================================================================
+spark-warehouse/
+metastore_db/
+derby.log
+logs/
+
+# =============================================================================
+# Raw data - NEVER committed and NEVER modified by any script in this project.
+# The .gitkeep files only preserve the empty folder skeleton.
+# =============================================================================
+data/raw/**/*
+!data/raw/**/.gitkeep
+
+# =============================================================================
+# Generated data / artefacts
+#
+# data/analytics IS version-controlled on purpose: the deployed Streamlit
+# dashboard reads these pre-computed outputs at runtime (see requirements.txt).
+# Everything else below is reproducible from data/raw and stays out of git.
+# =============================================================================
+data/processed/**/*
+!data/processed/.gitkeep
+
+# Power BI exports are for Power BI Desktop, not for the Streamlit app.
+data/powerbi/**/*
+
+models/*
+!models/.gitkeep
+
+reports/*
+!reports/.gitkeep
+
+# =============================================================================
+# Logs
+# =============================================================================
+*.log
+
+# =============================================================================
+# IDE / OS
+# =============================================================================
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini

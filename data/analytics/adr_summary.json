@@ -1,0 +1,294 @@
+{
+  "generated_at": "2026-11-14T17:57:13",
+  "quarters": [
+    "2026_Q1",
+    "2026_Q2"
+  ],
+  "disclaimer": "FAERS is a spontaneous reporting system: the counts below are numbers of reported events. They carry no denominator (no exposure, no population), are subject to severe reporting bias and duplicate/notoriety effects, and must NOT be read as incidence, risk, relative safety or drug causation.",
+  "grain": "Report = one distinct PRIMARYID (FAERS report identifier). Report/reaction pair = one distinct (quarter, PRIMARYID, PT) triple.",
+  "counts": {
+    "total_reports": 819683,
+    "total_cases": 793001,
+    "report_reaction_rows": 2725426,
+    "distinct_report_reaction_pairs": 2685356,
+    "duplicate_report_reaction_pairs": 40070,
+    "rows_sharing_a_repeated_report_reaction_key": 68780,
+    "repeated_report_reaction_keys": 28710,
+    "reports_with_at_least_one_reaction": 819683,
+    "reports_with_at_least_one_serious_outcome": 448822,
+    "distinct_report_drug_pairs": 2507110
+  },
+  "reactions_by_quarter": {
+    "2026_Q2": 1373932,
+    "2026_Q1": 1311424
+  },
+  "top_20_reactions": [
+    {
+      "reaction": "OFF LABEL USE",
+      "reports": 52960
+    },
+    {
+      "reaction": "DRUG INEFFECTIVE",
+      "reports": 45956
+    },
+    {
+      "reaction": "PRODUCT DOSE OMISSION ISSUE",
+      "reports": 36579
+    },
+    {
+      "reaction": "NAUSEA",
+      "reports": 35294
+    },
+    {
+      "reaction": "FATIGUE",
+      "reports": 34456
+    },
+    {
+      "reaction": "DIARRHOEA",
+      "reports": 31613
+    },
+    {
+      "reaction": "DEATH",
+      "reports": 27670
+    },
+    {
+      "reaction": "HEADACHE",
+      "reports": 26661
+    },
+    {
+      "reaction": "PRURITUS",
+      "reports": 25594
+    },
+    {
+      "reaction": "PAIN",
+      "reports": 21751
+    },
+    {
+      "reaction": "DYSPNOEA",
+      "reports": 21535
+    },
+    {
+      "reaction": "VOMITING",
+      "reports": 21527
+    },
+    {
+      "reaction": "RASH",
+      "reports": 20850
+    },
+    {
+      "reaction": "DIZZINESS",
+      "reports": 20591
+    },
+    {
+      "reaction": "ARTHRALGIA",
+      "reports": 20470
+    },
+    {
+      "reaction": "CONDITION AGGRAVATED",
+      "reports": 17489
+    },
+    {
+      "reaction": "INJECTION SITE PAIN",
+      "reports": 16775
+    },
+    {
+      "reaction": "PRODUCT USE IN UNAPPROVED INDICATION",
+      "reports": 16042
+    },
+    {
+      "reaction": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "reports": 15349
+    },
+    {
+      "reaction": "PNEUMONIA",
+      "reports": 14793
+    }
+  ],
+  "top_20_drugs": [
+    {
+      "drug": "DUPIXENT",
+      "reports": 79845
+    },
+    {
+      "drug": "ZEPBOUND",
+      "reports": 24269
+    },
+    {
+      "drug": "PREDNISONE",
+      "reports": 23540
+    },
+    {
+      "drug": "TYMLOS",
+      "reports": 19828
+    },
+    {
+      "drug": "ASPIRIN",
+      "reports": 19751
+    },
+    {
+      "drug": "ACETAMINOPHEN",
+      "reports": 19004
+    },
+    {
+      "drug": "ATORVASTATIN",
+      "reports": 15986
+    },
+    {
+      "drug": "MOUNJARO",
+      "reports": 14114
+    },
+    {
+      "drug": "GABAPENTIN",
+      "reports": 13556
+    },
+    {
+      "drug": "OZEMPIC",
+      "reports": 13483
+    },
+    {
+      "drug": "OMEPRAZOLE",
+      "reports": 13238
+    },
+    {
+      "drug": "VITAMIN D3",
+      "reports": 13205
+    },
+    {
+      "drug": "AMLODIPINE",
+      "reports": 12639
+    },
+    {
+      "drug": "METFORMIN",
+      "reports": 11764
+    },
+    {
+      "drug": "SKYRIZI",
+      "reports": 11547
+    },
+    {
+      "drug": "METHOTREXATE",
+      "reports": 11507
+    },
+    {
+      "drug": "DEXAMETHASONE",
+      "reports": 11495
+    },
+    {
+      "drug": "RITUXIMAB",
+      "reports": 11469
+    },
+    {
+      "drug": "FUROSEMIDE",
+      "reports": 10439
+    },
+    {
+      "drug": "DEPO-PROVERA",
+      "reports": 10303
+    }
+  ],
+  "serious_outcomes": [
+    {
+      "code": "OT",
+      "label": "Other Serious (Important Medical Event)",
+      "reports": 326939
+    },
+    {
+      "code": "HO",
+      "label": "Hospitalization - Initial or Prolonged",
+      "reports": 164124
+    },
+    {
+      "code": "DE",
+      "label": "Death",
+      "reports": 59257
+    },
+    {
+      "code": "LT",
+      "label": "Life-Threatening",
+      "reports": 26417
+    },
+    {
+      "code": "DS",
+      "label": "Disability",
+      "reports": 12271
+    },
+    {
+      "code": "CA",
+      "label": "Congenital Anomaly",
+      "reports": 3186
+    },
+    {
+      "code": "RI",
+      "label": "Required Intervention to Prevent Permanent Impairment/Damage",
+      "reports": 3091
+    }
+  ],
+  "checks": [
+    {
+      "name": "cleaning removed no rows (DEMO/DRUG/REAC/OUTC)",
+      "passed": true,
+      "detail": "DEMO=819,683->819,683; DRUG=3,330,435->3,330,435; REAC=2,725,426->2,725,426; OUTC=595,285->595,285"
+    },
+    {
+      "name": "top reaction counts are positive and non-increasing",
+      "passed": true,
+      "detail": "100 reaction(s) ranked"
+    },
+    {
+      "name": "duplicate report/reaction rows detected and excluded from counts",
+      "passed": true,
+      "detail": "raw rows 2,725,426 - distinct pairs 2,685,356 = 40,070 extra row(s)"
+    },
+    {
+      "name": "reaction duplicate count agrees with the preprocessing module",
+      "passed": true,
+      "detail": "rows in repeated (quarter, PRIMARYID, PT) keys 68,780 vs preprocessing 68,780 across 28,710 repeated key(s)"
+    },
+    {
+      "name": "distinct pairs per quarter sum to the overall distinct pairs",
+      "passed": true,
+      "detail": "2,685,356 vs 2,685,356"
+    },
+    {
+      "name": "Q1 and Q2 are both present and distinguishable",
+      "passed": true,
+      "detail": "2026_Q1=1,311,424, 2026_Q2=1,373,932"
+    },
+    {
+      "name": "age buckets cover every report",
+      "passed": true,
+      "detail": "819,683 vs 819,683"
+    },
+    {
+      "name": "sex categories cover every report",
+      "passed": true,
+      "detail": "819,683 vs 819,683"
+    },
+    {
+      "name": "outcome code counts sum to the distinct OUTC rows",
+      "passed": true,
+      "detail": "595,285 vs 595,285"
+    },
+    {
+      "name": "every OUTC code maps to a documented FAERS label",
+      "passed": true,
+      "detail": "unmapped: none"
+    },
+    {
+      "name": "reports with a serious outcome never exceed total reports",
+      "passed": true,
+      "detail": "448,822 <= 819,683"
+    },
+    {
+      "name": "reports with a reaction never exceed total reports",
+      "passed": true,
+      "detail": "819,683 <= 819,683"
+    },
+    {
+      "name": "drug/reaction join produced no duplicate rows (no multiplication)",
+      "passed": true,
+      "detail": "18,892,317 rows, 18,892,317 distinct"
+    }
+  ],
+  "errors": []
+}

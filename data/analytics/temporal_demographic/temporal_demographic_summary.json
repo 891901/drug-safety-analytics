@@ -1,0 +1,500 @@
+{
+  "generated_at": "2026-11-14T22:40:10",
+  "quarters": [
+    "2026_Q1",
+    "2026_Q2"
+  ],
+  "disclaimer": "FAERS is a spontaneous reporting system: the counts below are numbers of reported events. They carry no denominator (no exposure, no population), are subject to severe reporting bias and duplicate/notoriety effects, and must NOT be read as incidence, risk, relative safety or drug causation. The demographic breakdowns describe who was REPORTED, not who was exposed or affected, so they must not be read as disease incidence or as evidence that any group is at higher clinical risk.",
+  "grain": "Report = one distinct (quarter, PRIMARYID) pair (FAERS report). Reaction pair = one distinct (quarter, PRIMARYID, PT) triple. Serious report = one distinct (quarter, PRIMARYID) with an OUTC row.",
+  "temporal": {
+    "total_reports": 819683,
+    "reports_by_quarter": {
+      "2026_Q2": 422459,
+      "2026_Q1": 397224
+    },
+    "reaction_pairs_by_quarter": {
+      "2026_Q2": 1373932,
+      "2026_Q1": 1311424
+    },
+    "serious_reports_by_quarter": {
+      "2026_Q2": 230767,
+      "2026_Q1": 218055
+    },
+    "reports_with_reaction": 819683,
+    "reports_with_serious_outcome": 448822,
+    "report_date_column": "REPT_DT_DATE",
+    "fallback_date_column": "FDA_DT_DATE",
+    "reports_with_report_date": 819683,
+    "reports_using_fallback_date": 0,
+    "reports_missing_date": 0,
+    "months_with_data": 65,
+    "date_range": [
+      "2019-02",
+      "2026-07"
+    ],
+    "top_reactions": [
+      {
+        "quarter": "2026_Q1",
+        "reaction": "OFF LABEL USE",
+        "reports": 26700
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "DRUG INEFFECTIVE",
+        "reports": 22357
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "PRODUCT DOSE OMISSION ISSUE",
+        "reports": 19306
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "NAUSEA",
+        "reports": 17372
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "FATIGUE",
+        "reports": 17094
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "DIARRHOEA",
+        "reports": 15029
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "DEATH",
+        "reports": 14200
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "HEADACHE",
+        "reports": 13856
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "PRURITUS",
+        "reports": 11365
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "PAIN",
+        "reports": 10848
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "VOMITING",
+        "reports": 10727
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "DYSPNOEA",
+        "reports": 10544
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "DIZZINESS",
+        "reports": 10478
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "RASH",
+        "reports": 9949
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "ARTHRALGIA",
+        "reports": 9823
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "CONDITION AGGRAVATED",
+        "reports": 8715
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "INJECTION SITE PAIN",
+        "reports": 7370
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "PRODUCT USE IN UNAPPROVED INDICATION",
+        "reports": 7366
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "MALAISE",
+        "reports": 7297
+      },
+      {
+        "quarter": "2026_Q1",
+        "reaction": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+        "reports": 7204
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "OFF LABEL USE",
+        "reports": 26260
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "DRUG INEFFECTIVE",
+        "reports": 23599
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "NAUSEA",
+        "reports": 17922
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "FATIGUE",
+        "reports": 17362
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "PRODUCT DOSE OMISSION ISSUE",
+        "reports": 17273
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "DIARRHOEA",
+        "reports": 16584
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "PRURITUS",
+        "reports": 14229
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "DEATH",
+        "reports": 13470
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "HEADACHE",
+        "reports": 12805
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "DYSPNOEA",
+        "reports": 10991
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "PAIN",
+        "reports": 10903
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "RASH",
+        "reports": 10901
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "VOMITING",
+        "reports": 10800
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "ARTHRALGIA",
+        "reports": 10647
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "DIZZINESS",
+        "reports": 10113
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "INJECTION SITE PAIN",
+        "reports": 9405
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "CONDITION AGGRAVATED",
+        "reports": 8774
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "PRODUCT USE IN UNAPPROVED INDICATION",
+        "reports": 8676
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "MENINGIOMA",
+        "reports": 8556
+      },
+      {
+        "quarter": "2026_Q2",
+        "reaction": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+        "reports": 8145
+      }
+    ],
+    "top_drugs_by_reports": [
+      {
+        "drug": "DUPIXENT",
+        "reports": 79845
+      },
+      {
+        "drug": "ZEPBOUND",
+        "reports": 24269
+      },
+      {
+        "drug": "PREDNISONE",
+        "reports": 23540
+      },
+      {
+        "drug": "TYMLOS",
+        "reports": 19828
+      },
+      {
+        "drug": "ASPIRIN",
+        "reports": 19751
+      },
+      {
+        "drug": "ACETAMINOPHEN",
+        "reports": 19004
+      },
+      {
+        "drug": "ATORVASTATIN",
+        "reports": 15986
+      },
+      {
+        "drug": "MOUNJARO",
+        "reports": 14114
+      },
+      {
+        "drug": "GABAPENTIN",
+        "reports": 13556
+      },
+      {
+        "drug": "OZEMPIC",
+        "reports": 13483
+      },
+      {
+        "drug": "OMEPRAZOLE",
+        "reports": 13238
+      },
+      {
+        "drug": "VITAMIN D3",
+        "reports": 13205
+      },
+      {
+        "drug": "AMLODIPINE",
+        "reports": 12639
+      },
+      {
+        "drug": "METFORMIN",
+        "reports": 11764
+      },
+      {
+        "drug": "SKYRIZI",
+        "reports": 11547
+      },
+      {
+        "drug": "METHOTREXATE",
+        "reports": 11507
+      },
+      {
+        "drug": "DEXAMETHASONE",
+        "reports": 11495
+      },
+      {
+        "drug": "RITUXIMAB",
+        "reports": 11469
+      },
+      {
+        "drug": "FUROSEMIDE",
+        "reports": 10439
+      },
+      {
+        "drug": "DEPO-PROVERA",
+        "reports": 10303
+      }
+    ]
+  },
+  "demographic": {
+    "age": [
+      {
+        "bucket": "0-17",
+        "reports": 36782
+      },
+      {
+        "bucket": "18-44",
+        "reports": 109153
+      },
+      {
+        "bucket": "45-64",
+        "reports": 160266
+      },
+      {
+        "bucket": "65-74",
+        "reports": 109120
+      },
+      {
+        "bucket": "75+",
+        "reports": 96546
+      },
+      {
+        "bucket": "Unknown",
+        "reports": 307816
+      }
+    ],
+    "sex": [
+      {
+        "sex": "F",
+        "reports": 411256
+      },
+      {
+        "sex": "M",
+        "reports": 253575
+      },
+      {
+        "sex": "Unknown",
+        "reports": 154852
+      }
+    ],
+    "age_missing": 307816,
+    "sex_missing": 154852,
+    "serious_by_age": [
+      {
+        "bucket": "0-17",
+        "serious_reports": 18133,
+        "total_reports": 36782,
+        "share": 49.2986
+      },
+      {
+        "bucket": "18-44",
+        "serious_reports": 64919,
+        "total_reports": 109153,
+        "share": 59.4752
+      },
+      {
+        "bucket": "45-64",
+        "serious_reports": 97509,
+        "total_reports": 160266,
+        "share": 60.842
+      },
+      {
+        "bucket": "65-74",
+        "serious_reports": 68132,
+        "total_reports": 109120,
+        "share": 62.4377
+      },
+      {
+        "bucket": "75+",
+        "serious_reports": 64575,
+        "total_reports": 96546,
+        "share": 66.8852
+      },
+      {
+        "bucket": "Unknown",
+        "serious_reports": 135554,
+        "total_reports": 307816,
+        "share": 44.0373
+      }
+    ],
+    "serious_by_sex": [
+      {
+        "sex": "F",
+        "serious_reports": 219006,
+        "total_reports": 411256,
+        "share": 53.253
+      },
+      {
+        "sex": "M",
+        "serious_reports": 159098,
+        "total_reports": 253575,
+        "share": 62.742
+      },
+      {
+        "sex": "Unknown",
+        "serious_reports": 70718,
+        "total_reports": 154852,
+        "share": 45.6681
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "cleaning removed no rows (DEMO/DRUG/REAC/OUTC)",
+      "passed": true,
+      "detail": "DEMO=819,683->819,683; DRUG=3,330,435->3,330,435; REAC=2,725,426->2,725,426; OUTC=595,285->595,285"
+    },
+    {
+      "name": "quarterly report counts sum to the total distinct reports",
+      "passed": true,
+      "detail": "819,683 vs 819,683"
+    },
+    {
+      "name": "Q1 and Q2 are both present with positive report counts",
+      "passed": true,
+      "detail": "2026_Q1=397,224, 2026_Q2=422,459"
+    },
+    {
+      "name": "reports carrying a reaction match the report grain in every quarter",
+      "passed": true,
+      "detail": "2026_Q1=397,224; 2026_Q2=422,459"
+    },
+    {
+      "name": "monthly counts plus undated reports equal the total reports",
+      "passed": true,
+      "detail": "dated 819,683 + undated 0 vs total 819,683"
+    },
+    {
+      "name": "monthly report months are strictly increasing and unique",
+      "passed": true,
+      "detail": "65 month(s), range 2019-02..2026-07"
+    },
+    {
+      "name": "report-date coverage is sufficient for a monthly trend",
+      "passed": true,
+      "detail": "819,683 with REPT_DT, 0 using FDA_DT fallback, 0 with no date"
+    },
+    {
+      "name": "age buckets cover every report",
+      "passed": true,
+      "detail": "819,683 vs 819,683"
+    },
+    {
+      "name": "gender categories cover every report",
+      "passed": true,
+      "detail": "819,683 vs 819,683"
+    },
+    {
+      "name": "missing age/gender are reported as an explicit Unknown category",
+      "passed": true,
+      "detail": "age Unknown=307,816 vs null AGE_YEARS=307,816; gender Unknown=154,852 vs null SEX_NORM=154,852"
+    },
+    {
+      "name": "serious reports per age group sum to the total serious reports",
+      "passed": true,
+      "detail": "448,822 vs 448,822"
+    },
+    {
+      "name": "serious reports per gender sum to the total serious reports",
+      "passed": true,
+      "detail": "448,822 vs 448,822"
+    },
+    {
+      "name": "serious reporting share never exceeds 100% in any group",
+      "passed": true,
+      "detail": "all age and gender group shares within [0, 100]"
+    },
+    {
+      "name": "chart inputs are populated and consistent with the source aggregations",
+      "passed": true,
+      "detail": "quarters=2, reaction rows=40, age buckets=6, gender=3, drug-change rows=20"
+    },
+    {
+      "name": "top-reaction-per-quarter counts never exceed the quarter pair total",
+      "passed": true,
+      "detail": "40 ranked (quarter, reaction) row(s)"
+    }
+  ],
+  "errors": []
+}

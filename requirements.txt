@@ -1,0 +1,22 @@
+# =============================================================================
+# Streamlit Community Cloud - deployment requirements
+#
+# This file lists ONLY what the deployed dashboard imports at runtime, so the
+# cloud build stays small, fast and reliable.
+#
+# The dashboard reads its charts from the pre-computed CSV / JSON / HTML files in
+# data/analytics/ - it does NOT run Spark, pandas, PyArrow, scikit-learn or
+# mlxtend. Those heavy dependencies are only needed to *regenerate* the outputs
+# locally and are kept, unchanged, in requirements-analysis.txt.
+#
+# Verified imports of the dashboard (dashboard/**.py):
+#   streamlit            (app.py, every section, components/data.py, ui.py)
+#   plotly.graph_objects (components/charts.py)
+#   networkx             (sections/network.py - imported lazily)
+#   yaml                 (src/utils/config.py, imported by components/data.py)
+# =============================================================================
+
+streamlit>=1.31.0
+plotly>=5.18.0
+networkx>=3.2
+PyYAML>=6.0.1

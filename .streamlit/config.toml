@@ -1,0 +1,10 @@
+# Project-local Streamlit settings.
+#
+# gatherUsageStats is disabled because this Windows environment blocks
+# Streamlit's attempt to write its install id to %USERPROFILE%\.streamlit
+# (Application Control policy), which otherwise raises a PermissionError.
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true

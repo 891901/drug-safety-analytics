@@ -1,0 +1,708 @@
+{
+  "generated_at": "2026-11-14T18:59:24",
+  "disclaimer": "An edge only means the two drugs were reported together in the same FAERS report. It is NOT a confirmed drug-drug interaction, NOT evidence of a shared adverse event or indication, and NOT evidence of causation. A strong edge can simply reflect co-prescribing, the treated condition, or reporting habit.",
+  "grain": "Node = one standardised drug name (DRUGNAME_STD). Edge = one unordered co-reported pair {drug_a, drug_b} with drug_a < drug_b. Edge weight = the number of FAERS reports containing both drugs.",
+  "input": {
+    "path": "C:\\Users\\saket\\.trae\\worktrees\\Drug Safety Analytics\\data\\analytics\\drug_cooccurrence\\cooccurrence_top_pairs.csv",
+    "rows": 500,
+    "min_edge_weight": 2.0,
+    "edges_below_threshold": 0,
+    "self_loops_skipped": 0,
+    "duplicate_edges_merged": 0,
+    "reversed_edges_fixed": 0
+  },
+  "network": {
+    "nodes": 136,
+    "edges": 500,
+    "total_weight": 651139.0,
+    "connected_components": 5,
+    "largest_component": 127,
+    "density": 0.054466230936819175,
+    "display_nodes": 60,
+    "display_edges": 240,
+    "display_node_limit": 60,
+    "display_edge_limit": 240,
+    "layout": "spring",
+    "layout_seed": 42
+  },
+  "communities": {
+    "count": 8,
+    "modularity": 0.44035797132241233,
+    "note": "Louvain modularity communities (seeded, random_state=42)",
+    "top": [
+      {
+        "community_id": 0,
+        "size": 48,
+        "internal_edges": 129,
+        "total_weight": 176872.0,
+        "top_drug": "ASPIRIN",
+        "drugs": [
+          "ALBUTEROL SULFATE",
+          "ALLOPURINOL",
+          "AMLODIPINE",
+          "AMLODIPINE BESYLATE",
+          "ASPIRIN",
+          "ATORVASTATIN",
+          "ATORVASTATIN CALCIUM",
+          "BISOPROLOL",
+          "CALCIUM",
+          "CARVEDILOL"
+        ]
+      },
+      {
+        "community_id": 1,
+        "size": 31,
+        "internal_edges": 181,
+        "total_weight": 208861.0,
+        "top_drug": "RITUXIMAB",
+        "drugs": [
+          "ACTEMRA",
+          "ADALIMUMAB",
+          "ARAVA",
+          "CETIRIZINE HYDROCHLORIDE",
+          "CIMZIA",
+          "CORTISONE ACETATE",
+          "COSENTYX",
+          "DESOXIMETASONE",
+          "DICLOFENAC",
+          "DICLOFENAC POTASSIUM"
+        ]
+      },
+      {
+        "community_id": 2,
+        "size": 30,
+        "internal_edges": 48,
+        "total_weight": 64460.0,
+        "top_drug": "PREDNISONE",
+        "drugs": [
+          "ACETAMINOPHEN",
+          "ALBUTEROL",
+          "ALENDRONATE SODIUM",
+          "AZATHIOPRINE",
+          "CALCIUM CARBONATE",
+          "CELECOXIB",
+          "CETIRIZINE",
+          "CHOLECALCIFEROL",
+          "CODEINE",
+          "CYCLOSPORINE"
+        ]
+      },
+      {
+        "community_id": 3,
+        "size": 18,
+        "internal_edges": 18,
+        "total_weight": 28824.0,
+        "top_drug": "CYCLOPHOSPHAMIDE",
+        "drugs": [
+          "ACYCLOVIR",
+          "BORTEZOMIB",
+          "CARBOPLATIN",
+          "CYCLOPHOSPHAMIDE",
+          "CYTARABINE",
+          "DEXAMETHASONE",
+          "DOXORUBICIN",
+          "DOXORUBICIN HYDROCHLORIDE",
+          "ETOPOSIDE",
+          "FLUDARABINE"
+        ]
+      },
+      {
+        "community_id": 4,
+        "size": 3,
+        "internal_edges": 2,
+        "total_weight": 3329.0,
+        "top_drug": "FLUOROURACIL",
+        "drugs": [
+          "FLUOROURACIL",
+          "LEUCOVORIN",
+          "OXALIPLATIN"
+        ]
+      },
+      {
+        "community_id": 5,
+        "size": 2,
+        "internal_edges": 1,
+        "total_weight": 1874.0,
+        "top_drug": "CORTICOTROPIN",
+        "drugs": [
+          "ACTHAR",
+          "CORTICOTROPIN"
+        ]
+      },
+      {
+        "community_id": 6,
+        "size": 2,
+        "internal_edges": 1,
+        "total_weight": 1811.0,
+        "top_drug": "YERVOY",
+        "drugs": [
+          "OPDIVO",
+          "YERVOY"
+        ]
+      },
+      {
+        "community_id": 7,
+        "size": 2,
+        "internal_edges": 1,
+        "total_weight": 1216.0,
+        "top_drug": "VEVYE",
+        "drugs": [
+          "UNSPECIFIED INGREDIENT",
+          "VEVYE"
+        ]
+      }
+    ]
+  },
+  "top_connected_drugs": [
+    {
+      "drug": "PREDNISONE",
+      "degree": 65,
+      "weighted_degree": 95526.0,
+      "degree_centrality": 0.4814814814814815,
+      "betweenness_centrality": 0.33651197721994447,
+      "community": 2
+    },
+    {
+      "drug": "ACETAMINOPHEN",
+      "degree": 54,
+      "weighted_degree": 75611.0,
+      "degree_centrality": 0.4,
+      "betweenness_centrality": 0.17788752311824985,
+      "community": 2
+    },
+    {
+      "drug": "ASPIRIN",
+      "degree": 43,
+      "weighted_degree": 64129.0,
+      "degree_centrality": 0.31851851851851853,
+      "betweenness_centrality": 0.20822255425408426,
+      "community": 0
+    },
+    {
+      "drug": "RITUXIMAB",
+      "degree": 40,
+      "weighted_degree": 57414.0,
+      "degree_centrality": 0.2962962962962963,
+      "betweenness_centrality": 0.06182970840068493,
+      "community": 1
+    },
+    {
+      "drug": "METHOTREXATE",
+      "degree": 34,
+      "weighted_degree": 48653.0,
+      "degree_centrality": 0.2518518518518519,
+      "betweenness_centrality": 0.030776037704708544,
+      "community": 1
+    },
+    {
+      "drug": "FOLIC ACID",
+      "degree": 36,
+      "weighted_degree": 46190.0,
+      "degree_centrality": 0.26666666666666666,
+      "betweenness_centrality": 0.04414022933553423,
+      "community": 1
+    },
+    {
+      "drug": "VITAMIN D3",
+      "degree": 28,
+      "weighted_degree": 42429.0,
+      "degree_centrality": 0.20740740740740743,
+      "betweenness_centrality": 0.05963038384968861,
+      "community": 0
+    },
+    {
+      "drug": "ATORVASTATIN",
+      "degree": 19,
+      "weighted_degree": 30030.0,
+      "degree_centrality": 0.14074074074074075,
+      "betweenness_centrality": 0.02946561338919413,
+      "community": 0
+    },
+    {
+      "drug": "LEFLUNOMIDE",
+      "degree": 25,
+      "weighted_degree": 29819.0,
+      "degree_centrality": 0.1851851851851852,
+      "betweenness_centrality": 0.00303537136041282,
+      "community": 1
+    },
+    {
+      "drug": "SULFASALAZINE",
+      "degree": 22,
+      "weighted_degree": 26625.0,
+      "degree_centrality": 0.16296296296296298,
+      "betweenness_centrality": 0.001571664929873885,
+      "community": 1
+    },
+    {
+      "drug": "ACTEMRA",
+      "degree": 21,
+      "weighted_degree": 24225.0,
+      "degree_centrality": 0.15555555555555556,
+      "betweenness_centrality": 0.0007644097196336002,
+      "community": 1
+    },
+    {
+      "drug": "DESOXIMETASONE",
+      "degree": 21,
+      "weighted_degree": 22903.0,
+      "degree_centrality": 0.15555555555555556,
+      "betweenness_centrality": 0.014470044113493532,
+      "community": 1
+    },
+    {
+      "drug": "GABAPENTIN",
+      "degree": 17,
+      "weighted_degree": 22720.0,
+      "degree_centrality": 0.12592592592592594,
+      "betweenness_centrality": 0.016580094056964537,
+      "community": 0
+    },
+    {
+      "drug": "COSENTYX",
+      "degree": 19,
+      "weighted_degree": 21985.0,
+      "degree_centrality": 0.14074074074074075,
+      "betweenness_centrality": 0.0009149676562611887,
+      "community": 1
+    },
+    {
+      "drug": "OMEPRAZOLE",
+      "degree": 15,
+      "weighted_degree": 21786.0,
+      "degree_centrality": 0.11111111111111112,
+      "betweenness_centrality": 0.011295680746668302,
+      "community": 0
+    },
+    {
+      "drug": "ORENCIA",
+      "degree": 19,
+      "weighted_degree": 21500.0,
+      "degree_centrality": 0.14074074074074075,
+      "betweenness_centrality": 0.0007578558656502273,
+      "community": 1
+    },
+    {
+      "drug": "HUMIRA",
+      "degree": 19,
+      "weighted_degree": 21147.0,
+      "degree_centrality": 0.14074074074074075,
+      "betweenness_centrality": 0.0007854844007414487,
+      "community": 1
+    },
+    {
+      "drug": "ENBREL",
+      "degree": 18,
+      "weighted_degree": 20125.0,
+      "degree_centrality": 0.13333333333333333,
+      "betweenness_centrality": 0.00039424551862362803,
+      "community": 1
+    },
+    {
+      "drug": "FUROSEMIDE",
+      "degree": 13,
+      "weighted_degree": 19882.0,
+      "degree_centrality": 0.0962962962962963,
+      "betweenness_centrality": 0.010632798130954675,
+      "community": 0
+    },
+    {
+      "drug": "CYCLOPHOSPHAMIDE",
+      "degree": 11,
+      "weighted_degree": 18675.0,
+      "degree_centrality": 0.08148148148148149,
+      "betweenness_centrality": 0.13273436981057882,
+      "community": 3
+    }
+  ],
+  "top_betweenness_drugs": [
+    {
+      "drug": "PREDNISONE",
+      "degree": 65,
+      "weighted_degree": 95526.0,
+      "degree_centrality": 0.4814814814814815,
+      "betweenness_centrality": 0.33651197721994447,
+      "community": 2
+    },
+    {
+      "drug": "ASPIRIN",
+      "degree": 43,
+      "weighted_degree": 64129.0,
+      "degree_centrality": 0.31851851851851853,
+      "betweenness_centrality": 0.20822255425408426,
+      "community": 0
+    },
+    {
+      "drug": "ACETAMINOPHEN",
+      "degree": 54,
+      "weighted_degree": 75611.0,
+      "degree_centrality": 0.4,
+      "betweenness_centrality": 0.17788752311824985,
+      "community": 2
+    },
+    {
+      "drug": "CYCLOPHOSPHAMIDE",
+      "degree": 11,
+      "weighted_degree": 18675.0,
+      "degree_centrality": 0.08148148148148149,
+      "betweenness_centrality": 0.13273436981057882,
+      "community": 3
+    },
+    {
+      "drug": "ETOPOSIDE",
+      "degree": 2,
+      "weighted_degree": 2698.0,
+      "degree_centrality": 0.014814814814814815,
+      "betweenness_centrality": 0.07960199004975126,
+      "community": 3
+    },
+    {
+      "drug": "CARBOPLATIN",
+      "degree": 5,
+      "weighted_degree": 8737.0,
+      "degree_centrality": 0.037037037037037035,
+      "betweenness_centrality": 0.06788280818131566,
+      "community": 3
+    },
+    {
+      "drug": "RITUXIMAB",
+      "degree": 40,
+      "weighted_degree": 57414.0,
+      "degree_centrality": 0.2962962962962963,
+      "betweenness_centrality": 0.06182970840068493,
+      "community": 1
+    },
+    {
+      "drug": "VITAMIN D3",
+      "degree": 28,
+      "weighted_degree": 42429.0,
+      "degree_centrality": 0.20740740740740743,
+      "betweenness_centrality": 0.05963038384968861,
+      "community": 0
+    },
+    {
+      "drug": "DUPIXENT",
+      "degree": 12,
+      "weighted_degree": 16077.0,
+      "degree_centrality": 0.08888888888888889,
+      "betweenness_centrality": 0.053161865569272986,
+      "community": 0
+    },
+    {
+      "drug": "DEXAMETHASONE",
+      "degree": 9,
+      "weighted_degree": 12906.0,
+      "degree_centrality": 0.06666666666666667,
+      "betweenness_centrality": 0.04799639003897005,
+      "community": 3
+    },
+    {
+      "drug": "FOLIC ACID",
+      "degree": 36,
+      "weighted_degree": 46190.0,
+      "degree_centrality": 0.26666666666666666,
+      "betweenness_centrality": 0.04414022933553423,
+      "community": 1
+    },
+    {
+      "drug": "METHOTREXATE",
+      "degree": 34,
+      "weighted_degree": 48653.0,
+      "degree_centrality": 0.2518518518518519,
+      "betweenness_centrality": 0.030776037704708544,
+      "community": 1
+    },
+    {
+      "drug": "ATORVASTATIN",
+      "degree": 19,
+      "weighted_degree": 30030.0,
+      "degree_centrality": 0.14074074074074075,
+      "betweenness_centrality": 0.02946561338919413,
+      "community": 0
+    },
+    {
+      "drug": "METFORMIN",
+      "degree": 10,
+      "weighted_degree": 13613.0,
+      "degree_centrality": 0.07407407407407407,
+      "betweenness_centrality": 0.02814788215285728,
+      "community": 0
+    },
+    {
+      "drug": "ALBUTEROL SULFATE",
+      "degree": 12,
+      "weighted_degree": 17180.0,
+      "degree_centrality": 0.08888888888888889,
+      "betweenness_centrality": 0.021522553581617004,
+      "community": 0
+    },
+    {
+      "drug": "GABAPENTIN",
+      "degree": 17,
+      "weighted_degree": 22720.0,
+      "degree_centrality": 0.12592592592592594,
+      "betweenness_centrality": 0.016580094056964537,
+      "community": 0
+    },
+    {
+      "drug": "MYCOPHENOLATE MOFETIL",
+      "degree": 7,
+      "weighted_degree": 11597.0,
+      "degree_centrality": 0.05185185185185186,
+      "betweenness_centrality": 0.014959032133790526,
+      "community": 2
+    },
+    {
+      "drug": "DESOXIMETASONE",
+      "degree": 21,
+      "weighted_degree": 22903.0,
+      "degree_centrality": 0.15555555555555556,
+      "betweenness_centrality": 0.014470044113493532,
+      "community": 1
+    },
+    {
+      "drug": "OXYGEN",
+      "degree": 10,
+      "weighted_degree": 12278.0,
+      "degree_centrality": 0.07407407407407407,
+      "betweenness_centrality": 0.014274754175251689,
+      "community": 0
+    },
+    {
+      "drug": "INFLIXIMAB",
+      "degree": 14,
+      "weighted_degree": 17433.0,
+      "degree_centrality": 0.10370370370370371,
+      "betweenness_centrality": 0.014050777856748003,
+      "community": 1
+    }
+  ],
+  "top_edges": [
+    {
+      "drug_a": "PREDNISONE",
+      "drug_b": "RITUXIMAB",
+      "reports": 4342,
+      "lift": 13.1826807856,
+      "support": 0.0052971698,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "ASPIRIN",
+      "drug_b": "ATORVASTATIN",
+      "reports": 3788,
+      "lift": 9.8339274677,
+      "support": 0.0046212987,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "CARBOPLATIN",
+      "drug_b": "PACLITAXEL",
+      "reports": 3395,
+      "lift": 60.8848728267,
+      "support": 0.0041418451,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "FOLIC ACID",
+      "drug_b": "METHOTREXATE",
+      "reports": 3336,
+      "lift": 25.5631131211,
+      "support": 0.004069866,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "METHOTREXATE",
+      "drug_b": "PREDNISONE",
+      "reports": 3277,
+      "lift": 9.9163945458,
+      "support": 0.003997887,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "CYCLOPHOSPHAMIDE",
+      "drug_b": "RITUXIMAB",
+      "reports": 3045,
+      "lift": 24.8685227798,
+      "support": 0.0037148507,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "ACETAMINOPHEN",
+      "drug_b": "PREDNISONE",
+      "reports": 2966,
+      "lift": 5.4345750982,
+      "support": 0.003618472,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "ASPIRIN",
+      "drug_b": "VITAMIN D3",
+      "reports": 2789,
+      "lift": 8.7653032891,
+      "support": 0.0034025349,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "METHOTREXATE",
+      "drug_b": "RITUXIMAB",
+      "reports": 2697,
+      "lift": 16.750940988,
+      "support": 0.0032902964,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "MYCOPHENOLATE MOFETIL",
+      "drug_b": "TACROLIMUS",
+      "reports": 2667,
+      "lift": 39.7278711473,
+      "support": 0.0032536969,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "ACETAMINOPHEN",
+      "drug_b": "RITUXIMAB",
+      "reports": 2665,
+      "lift": 10.0224192744,
+      "support": 0.0032512569,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "CYCLOPHOSPHAMIDE",
+      "drug_b": "DOXORUBICIN",
+      "reports": 2599,
+      "lift": 71.1609028455,
+      "support": 0.003170738,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "AMLODIPINE",
+      "drug_b": "ATORVASTATIN",
+      "reports": 2590,
+      "lift": 10.507349293,
+      "support": 0.0031597581,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "MYCOPHENOLATE MOFETIL",
+      "drug_b": "PREDNISONE",
+      "reports": 2576,
+      "lift": 12.0903801727,
+      "support": 0.0031426783,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "ALBUTEROL SULFATE",
+      "drug_b": "DUPIXENT",
+      "reports": 2536,
+      "lift": 2.6498109655,
+      "support": 0.003093879,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "ATORVASTATIN",
+      "drug_b": "METFORMIN",
+      "reports": 2494,
+      "lift": 10.8704507489,
+      "support": 0.0030426397,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "FOLIC ACID",
+      "drug_b": "PREDNISONE",
+      "reports": 2482,
+      "lift": 9.2970492511,
+      "support": 0.0030279998,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "CYCLOPHOSPHAMIDE",
+      "drug_b": "PREDNISONE",
+      "reports": 2384,
+      "lift": 9.486107387,
+      "support": 0.0029084414,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "ASPIRIN",
+      "drug_b": "OMEPRAZOLE",
+      "reports": 2373,
+      "lift": 7.4393021911,
+      "support": 0.0028950216,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "PREDNISONE",
+      "drug_b": "VITAMIN D3",
+      "reports": 2333,
+      "lift": 6.151992577,
+      "support": 0.0028462223,
+      "passes_thresholds": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "input pairs read from the co-occurrence results",
+      "passed": true,
+      "detail": "500 pair row(s) read from cooccurrence_top_pairs.csv"
+    },
+    {
+      "name": "node and edge counts match the retained pair list",
+      "passed": true,
+      "detail": "136 node(s) = 136 distinct drug(s); 500 edge(s) = 500 retained pair(s)"
+    },
+    {
+      "name": "edge weights equal the actual co-occurrence report counts",
+      "passed": true,
+      "detail": "checked 500 edge(s); total weight 651,139 = sum of the 'reports' column 651,139; 0 mismatch(es)"
+    },
+    {
+      "name": "no self-loop edges",
+      "passed": true,
+      "detail": "0 self-loop(s) in the graph; 0 skipped while reading"
+    },
+    {
+      "name": "no duplicate edges (each unordered pair once)",
+      "passed": true,
+      "detail": "500 distinct unordered pair(s) over 500 edge(s); 0 duplicate key(s), 0 merged"
+    },
+    {
+      "name": "degree and degree centrality match an independent recount",
+      "passed": true,
+      "detail": "recounted all 136 node(s) from the adjacency lists"
+    },
+    {
+      "name": "weighted degree equals the incident edge weights (handshake holds)",
+      "passed": true,
+      "detail": "sum of weighted degrees = 1,302,278 = 2 x total weight; every node recounted"
+    },
+    {
+      "name": "betweenness centrality matches an independent Brandes computation",
+      "passed": true,
+      "detail": "recomputed all 136 node(s) in plain Python; max |difference| = 5.551e-17 at PREDNISONE"
+    },
+    {
+      "name": "communities partition the nodes exactly once",
+      "passed": true,
+      "detail": "8 community(ies) covering 136 of 136 node(s); modularity = 0.4404"
+    },
+    {
+      "name": "displayed network is within the configured node and edge limits",
+      "passed": true,
+      "detail": "60 node(s) <= 60; 240 edge(s) <= 240"
+    },
+    {
+      "name": "layout, selection and communities are reproducible with a fixed seed",
+      "passed": true,
+      "detail": "seed=42; max layout drift = 0.000e+00; identical communities = True; modularity 0.4404"
+    }
+  ],
+  "errors": [],
+  "outputs": {
+    "drug_network.html": "C:\\Users\\saket\\.trae\\worktrees\\Drug Safety Analytics\\data\\analytics\\network\\drug_network.html",
+    "top_connected_drugs.html": "C:\\Users\\saket\\.trae\\worktrees\\Drug Safety Analytics\\data\\analytics\\network\\top_connected_drugs.html",
+    "drug_relationships.html": "C:\\Users\\saket\\.trae\\worktrees\\Drug Safety Analytics\\data\\analytics\\network\\drug_relationships.html",
+    "drug_network_nodes.csv": "C:\\Users\\saket\\.trae\\worktrees\\Drug Safety Analytics\\data\\analytics\\network\\drug_network_nodes.csv",
+    "drug_network_edges.csv": "C:\\Users\\saket\\.trae\\worktrees\\Drug Safety Analytics\\data\\analytics\\network\\drug_network_edges.csv",
+    "drug_network_communities.csv": "C:\\Users\\saket\\.trae\\worktrees\\Drug Safety Analytics\\data\\analytics\\network\\drug_network_communities.csv"
+  }
+}

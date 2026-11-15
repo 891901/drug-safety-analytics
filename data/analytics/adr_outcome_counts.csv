@@ -1,0 +1,8 @@
+outc_cod,outcome_label,reports,pct_of_reports
+OT,Other Serious (Important Medical Event),326939,39.886
+HO,Hospitalization - Initial or Prolonged,164124,20.0229
+DE,Death,59257,7.2293
+LT,Life-Threatening,26417,3.2228
+DS,Disability,12271,1.497
+CA,Congenital Anomaly,3186,0.3887
+RI,Required Intervention to Prevent Permanent Impairment/Damage,3091,0.3771

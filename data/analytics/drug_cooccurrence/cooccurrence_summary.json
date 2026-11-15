@@ -1,0 +1,530 @@
+{
+  "generated_at": "2026-11-14T18:05:43",
+  "quarters": [
+    "2026_Q1",
+    "2026_Q2"
+  ],
+  "disclaimer": "Co-occurrence only means the two drugs were reported together in the same FAERS report. It is NOT evidence of a drug-drug interaction, of a shared adverse event, of an underlying indication, or of causation.",
+  "grain": "Report = one distinct (quarter, PRIMARYID). Drug pair = one unordered pair {drug_a, drug_b} with drug_a < drug_b, counted once per report.",
+  "thresholds": {
+    "min_support": 0.001,
+    "min_confidence": 0.2,
+    "min_lift": 1.2,
+    "max_itemset_size": 3,
+    "group_drug_limit": 100
+  },
+  "counts": {
+    "total_reports": 819683,
+    "reports_with_at_least_one_drug": 819683,
+    "drug_rows": 3330435,
+    "distinct_report_drug_pairs": 2507110,
+    "distinct_drug_names": 48884,
+    "drug_pair_rows": 15985613,
+    "expected_pair_rows": 15985613,
+    "self_pairs": 0,
+    "reversed_pairs": 0,
+    "duplicate_pair_rows": 0,
+    "distinct_pairs_overall": 2225819,
+    "qualifying_pairs": 172
+  },
+  "total_reports_by_quarter": {
+    "2026_Q1": 397224,
+    "2026_Q2": 422459
+  },
+  "distinct_pairs_by_quarter": {
+    "2026_Q2": 1464428,
+    "2026_Q1": 1504286
+  },
+  "top_20_pairs": [
+    {
+      "drug_a": "PREDNISONE",
+      "drug_b": "RITUXIMAB",
+      "reports": 4342,
+      "reports_a": 23540,
+      "reports_b": 11469,
+      "support": 0.005297169759528988,
+      "confidence_a_to_b": 0.1844519966015293,
+      "confidence_b_to_a": 0.3785857528991194,
+      "lift": 13.182680785624845,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "ASPIRIN",
+      "drug_b": "ATORVASTATIN",
+      "reports": 3788,
+      "reports_a": 19751,
+      "reports_b": 15986,
+      "support": 0.004621298721578952,
+      "confidence_a_to_b": 0.1917877575818946,
+      "confidence_b_to_a": 0.23695733767046165,
+      "lift": 9.833927467659208,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "CARBOPLATIN",
+      "drug_b": "PACLITAXEL",
+      "reports": 3395,
+      "reports_a": 8225,
+      "reports_b": 5557,
+      "support": 0.00414184507913425,
+      "confidence_a_to_b": 0.4127659574468085,
+      "confidence_b_to_a": 0.6109411552996221,
+      "lift": 60.884872826682084,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "FOLIC ACID",
+      "drug_b": "METHOTREXATE",
+      "reports": 3336,
+      "reports_a": 9296,
+      "reports_b": 11507,
+      "support": 0.004069866033576394,
+      "confidence_a_to_b": 0.3588640275387263,
+      "confidence_b_to_a": 0.2899104892674024,
+      "lift": 25.563113121145896,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "METHOTREXATE",
+      "drug_b": "PREDNISONE",
+      "reports": 3277,
+      "reports_a": 11507,
+      "reports_b": 23540,
+      "support": 0.0039978869880185385,
+      "confidence_a_to_b": 0.28478317545841664,
+      "confidence_b_to_a": 0.13920985556499574,
+      "lift": 9.916394545848824,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "CYCLOPHOSPHAMIDE",
+      "drug_b": "RITUXIMAB",
+      "reports": 3045,
+      "reports_a": 8751,
+      "reports_b": 11469,
+      "support": 0.0037148507410791733,
+      "confidence_a_to_b": 0.34796023311621527,
+      "confidence_b_to_a": 0.2654982997645828,
+      "lift": 24.868522779788883,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "ACETAMINOPHEN",
+      "drug_b": "PREDNISONE",
+      "reports": 2966,
+      "reports_a": 19004,
+      "reports_b": 23540,
+      "support": 0.0036184720190610272,
+      "confidence_a_to_b": 0.15607240580930332,
+      "confidence_b_to_a": 0.1259983007646559,
+      "lift": 5.434575098172776,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "ASPIRIN",
+      "drug_b": "VITAMIN D3",
+      "reports": 2789,
+      "reports_a": 19751,
+      "reports_b": 13205,
+      "support": 0.0034025348823874596,
+      "confidence_a_to_b": 0.1412080400992355,
+      "confidence_b_to_a": 0.21120787580461947,
+      "lift": 8.76530328910728,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "METHOTREXATE",
+      "drug_b": "RITUXIMAB",
+      "reports": 2697,
+      "reports_a": 11507,
+      "reports_b": 11469,
+      "support": 0.003290296370670125,
+      "confidence_a_to_b": 0.23437907360736943,
+      "confidence_b_to_a": 0.23515563693434474,
+      "lift": 16.750940988029416,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "MYCOPHENOLATE MOFETIL",
+      "drug_b": "TACROLIMUS",
+      "reports": 2667,
+      "reports_a": 7419,
+      "reports_b": 7417,
+      "support": 0.00325369685597969,
+      "confidence_a_to_b": 0.3594824100283057,
+      "confidence_b_to_a": 0.35957934474855063,
+      "lift": 39.72787114726058,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "ACETAMINOPHEN",
+      "drug_b": "RITUXIMAB",
+      "reports": 2665,
+      "reports_a": 19004,
+      "reports_b": 11469,
+      "support": 0.0032512568883336606,
+      "confidence_a_to_b": 0.14023363502420544,
+      "confidence_b_to_a": 0.23236550701892056,
+      "lift": 10.022419274352234,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "CYCLOPHOSPHAMIDE",
+      "drug_b": "DOXORUBICIN",
+      "reports": 2599,
+      "reports_a": 8751,
+      "reports_b": 3421,
+      "support": 0.0031707379560147035,
+      "confidence_a_to_b": 0.29699462918523595,
+      "confidence_b_to_a": 0.7597193802981584,
+      "lift": 71.16090284549598,
+      "passes_thresholds": true
+    },
+    {
+      "drug_a": "AMLODIPINE",
+      "drug_b": "ATORVASTATIN",
+      "reports": 2590,
+      "reports_a": 12639,
+      "reports_b": 15986,
+      "support": 0.0031597581016075725,
+      "confidence_a_to_b": 0.20492127541735897,
+      "confidence_b_to_a": 0.16201676466908546,
+      "lift": 10.507349293001818,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "MYCOPHENOLATE MOFETIL",
+      "drug_b": "PREDNISONE",
+      "reports": 2576,
+      "reports_a": 7419,
+      "reports_b": 23540,
+      "support": 0.0031426783280853695,
+      "confidence_a_to_b": 0.3472166060115919,
+      "confidence_b_to_a": 0.10943075615972812,
+      "lift": 12.090380172701769,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "ALBUTEROL SULFATE",
+      "drug_b": "DUPIXENT",
+      "reports": 2536,
+      "reports_a": 9825,
+      "reports_b": 79845,
+      "support": 0.003093878975164789,
+      "confidence_a_to_b": 0.258117048346056,
+      "confidence_b_to_a": 0.031761537979835934,
+      "lift": 2.6498109654886366,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "ATORVASTATIN",
+      "drug_b": "METFORMIN",
+      "reports": 2494,
+      "reports_a": 15986,
+      "reports_b": 11764,
+      "support": 0.00304263965459818,
+      "confidence_a_to_b": 0.1560115100713124,
+      "confidence_b_to_a": 0.21200272016320978,
+      "lift": 10.870450748876536,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "FOLIC ACID",
+      "drug_b": "PREDNISONE",
+      "reports": 2482,
+      "reports_a": 9296,
+      "reports_b": 23540,
+      "support": 0.003027999848722006,
+      "confidence_a_to_b": 0.26699655765920827,
+      "confidence_b_to_a": 0.1054375531011045,
+      "lift": 9.297049251137333,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "CYCLOPHOSPHAMIDE",
+      "drug_b": "PREDNISONE",
+      "reports": 2384,
+      "reports_a": 8751,
+      "reports_b": 23540,
+      "support": 0.002908441434066584,
+      "confidence_a_to_b": 0.2724260084561764,
+      "confidence_b_to_a": 0.10127442650807136,
+      "lift": 9.486107386974684,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "ASPIRIN",
+      "drug_b": "OMEPRAZOLE",
+      "reports": 2373,
+      "reports_a": 19751,
+      "reports_b": 13238,
+      "support": 0.0028950216120134245,
+      "confidence_a_to_b": 0.12014581540175182,
+      "confidence_b_to_a": 0.17925668529989425,
+      "lift": 7.4393021911130175,
+      "passes_thresholds": false
+    },
+    {
+      "drug_a": "PREDNISONE",
+      "drug_b": "VITAMIN D3",
+      "reports": 2333,
+      "reports_a": 23540,
+      "reports_b": 13205,
+      "support": 0.002846222259092844,
+      "confidence_a_to_b": 0.09910790144435004,
+      "confidence_b_to_a": 0.17667550170390003,
+      "lift": 6.15199257702455,
+      "passes_thresholds": false
+    }
+  ],
+  "top_groups": [
+    {
+      "drugs": [
+        "CYCLOPHOSPHAMIDE",
+        "PREDNISONE",
+        "RITUXIMAB"
+      ],
+      "reports": 1735,
+      "support": 0.0021166719329301694
+    },
+    {
+      "drugs": [
+        "METHOTREXATE",
+        "PREDNISONE",
+        "RITUXIMAB"
+      ],
+      "reports": 1686,
+      "support": 0.0020568927256024586
+    },
+    {
+      "drugs": [
+        "FOLIC ACID",
+        "METHOTREXATE",
+        "PREDNISONE"
+      ],
+      "reports": 1576,
+      "support": 0.0019226945050708627
+    },
+    {
+      "drugs": [
+        "ACETAMINOPHEN",
+        "PREDNISONE",
+        "RITUXIMAB"
+      ],
+      "reports": 1430,
+      "support": 0.0017445768669107449
+    },
+    {
+      "drugs": [
+        "ACETAMINOPHEN",
+        "METHOTREXATE",
+        "PREDNISONE"
+      ],
+      "reports": 1275,
+      "support": 0.001555479374343496
+    },
+    {
+      "drugs": [
+        "ACETAMINOPHEN",
+        "FOLIC ACID",
+        "METHOTREXATE"
+      ],
+      "reports": 1223,
+      "support": 0.001492040215546742
+    },
+    {
+      "drugs": [
+        "ACETAMINOPHEN",
+        "FOLIC ACID",
+        "PREDNISONE"
+      ],
+      "reports": 1215,
+      "support": 0.0014822803449626258
+    },
+    {
+      "drugs": [
+        "COSENTYX",
+        "METHOTREXATE",
+        "RITUXIMAB"
+      ],
+      "reports": 1212,
+      "support": 0.0014786203934935823
+    },
+    {
+      "drugs": [
+        "FOLIC ACID",
+        "PREDNISONE",
+        "RITUXIMAB"
+      ],
+      "reports": 1194,
+      "support": 0.001456660684679321
+    },
+    {
+      "drugs": [
+        "FOLIC ACID",
+        "METHOTREXATE",
+        "RITUXIMAB"
+      ],
+      "reports": 1182,
+      "support": 0.001442020878803147
+    },
+    {
+      "drugs": [
+        "ACETAMINOPHEN",
+        "METHOTREXATE",
+        "RITUXIMAB"
+      ],
+      "reports": 1155,
+      "support": 0.0014090813155817554
+    },
+    {
+      "drugs": [
+        "ACETAMINOPHEN",
+        "METHYLPREDNISOLONE",
+        "RITUXIMAB"
+      ],
+      "reports": 1148,
+      "support": 0.0014005414288206538
+    },
+    {
+      "drugs": [
+        "COSENTYX",
+        "PREDNISONE",
+        "RITUXIMAB"
+      ],
+      "reports": 1144,
+      "support": 0.001395661493528596
+    },
+    {
+      "drugs": [
+        "INFLIXIMAB",
+        "METHOTREXATE",
+        "PREDNISONE"
+      ],
+      "reports": 1136,
+      "support": 0.0013859016229444798
+    },
+    {
+      "drugs": [
+        "METHOTREXATE",
+        "ORENCIA",
+        "PREDNISONE"
+      ],
+      "reports": 1132,
+      "support": 0.0013810216876524216
+    },
+    {
+      "drugs": [
+        "HUMIRA",
+        "METHOTREXATE",
+        "PREDNISONE"
+      ],
+      "reports": 1096,
+      "support": 0.0013371022700238995
+    },
+    {
+      "drugs": [
+        "ORENCIA",
+        "PREDNISONE",
+        "RITUXIMAB"
+      ],
+      "reports": 1082,
+      "support": 0.0013200224965016964
+    },
+    {
+      "drugs": [
+        "METHOTREXATE",
+        "ORENCIA",
+        "RITUXIMAB"
+      ],
+      "reports": 1075,
+      "support": 0.001311482609740595
+    },
+    {
+      "drugs": [
+        "FOLIC ACID",
+        "INFLIXIMAB",
+        "METHOTREXATE"
+      ],
+      "reports": 1064,
+      "support": 0.0012980627876874352
+    },
+    {
+      "drugs": [
+        "FOLIC ACID",
+        "METHOTREXATE",
+        "ORENCIA"
+      ],
+      "reports": 1061,
+      "support": 0.0012944028362183917
+    }
+  ],
+  "checks": [
+    {
+      "name": "cleaning removed no rows (DEMO/DRUG)",
+      "passed": true,
+      "detail": "DEMO=819,683->819,683; DRUG=3,330,435->3,330,435"
+    },
+    {
+      "name": "duplicate drug names within a report removed before pairing",
+      "passed": true,
+      "detail": "3,330,435 DRUG rows reduced to 2,507,110 distinct (quarter, PRIMARYID, drug) rows"
+    },
+    {
+      "name": "no self-pairs (a drug is never paired with itself)",
+      "passed": true,
+      "detail": "0 self-pair row(s)"
+    },
+    {
+      "name": "no reversed duplicate pairs (drug_a < drug_b always)",
+      "passed": true,
+      "detail": "0 row(s) with drug_a > drug_b"
+    },
+    {
+      "name": "no duplicate pair rows (one unordered pair per report)",
+      "passed": true,
+      "detail": "15,985,613 rows, 15,985,613 distinct"
+    },
+    {
+      "name": "pair count equals the sum of C(drugs in report, 2) over all reports",
+      "passed": true,
+      "detail": "15,985,613 pair rows vs 15,985,613 expected"
+    },
+    {
+      "name": "distinct pairs per quarter sum to the per-quarter pair counts",
+      "passed": true,
+      "detail": "2026_Q1=1,504,286 + 2026_Q2=1,464,428 = 2,968,714 (overall distinct pairs 2,225,819; pairs shared by both quarters are counted once per quarter)"
+    },
+    {
+      "name": "Q1 and Q2 are both present and distinguishable",
+      "passed": true,
+      "detail": "2026_Q1=1,504,286, 2026_Q2=1,464,428"
+    },
+    {
+      "name": "a pair is never reported more often than either of its drugs",
+      "passed": true,
+      "detail": "checked 500 ranked pair(s)"
+    },
+    {
+      "name": "ranked pair counts are positive and non-increasing",
+      "passed": true,
+      "detail": "500 pair(s) ranked"
+    },
+    {
+      "name": "support, confidence and lift recomputed exactly from integer counts",
+      "passed": true,
+      "detail": "max |Spark - exact| difference = 0.000e+00 over 540 row(s)"
+    },
+    {
+      "name": "threshold screening is within the observed pair universe",
+      "passed": true,
+      "detail": "172 qualifying pair(s) of 2,225,819 distinct pair(s)"
+    },
+    {
+      "name": "co-reported group counts are positive and within total reports",
+      "passed": true,
+      "detail": "checked 200 group(s) mined from the 100 most-reported drugs"
+    }
+  ],
+  "errors": []
+}
